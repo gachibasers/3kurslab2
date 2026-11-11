@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="PreciousnessType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRECIOUS"/>
+      <xs:enumeration value="SEMI_PRECIOUS"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ColorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GREEN"/>
+      <xs:enumeration value="RED"/>
+      <xs:enumeration value="YELLOW"/>
+      <xs:enumeration value="BLUE"/>
+      <xs:enumeration value="WHITE"/>
+      <xs:enumeration value="BLACK"/>
+      <xs:enumeration value="PINK"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TransparencyType">
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="FacetsType">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="4"/>
+      <xs:maxInclusive value="15"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="VisualParametersType">
+    <xs:sequence>
+      <xs:element name="color" type="ColorType"/>
+      <xs:element name="transparency" type="TransparencyType"/>
+      <xs:element name="facets" type="FacetsType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GemstoneType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="origin" type="xs:string"/>
+      <xs:element name="visualParameters" type="VisualParametersType"/>
+      <xs:element name="value" type="xs:double"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="preciousness" type="PreciousnessType" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="Gem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="gemstone" type="GemstoneType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

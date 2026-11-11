@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="gem.xsd">
+  <gemstone id="G001" preciousness="PRECIOUS">
+    <name>Diamond</name>
+    <origin>South Africa</origin>
+    <visualParameters>
+      <color>WHITE</color>
+      <transparency>99.5</transparency>
+      <facets>12</facets>
+    </visualParameters>
+    <value>5.2</value>
+  </gemstone>
+  <gemstone id="G002" preciousness="PRECIOUS">
+    <name>Ruby</name>
+    <origin>Myanmar</origin>
+    <visualParameters>
+      <color>RED</color>
+      <transparency>85.0</transparency>
+      <facets>9</facets>
+    </visualParameters>
+    <value>3.8</value>
+  </gemstone>
+  <gemstone id="G003" preciousness="SEMI_PRECIOUS">
+    <name>Amethyst</name>
+    <origin>Brazil</origin>
+    <visualParameters>
+      <color>PINK</color>
+      <transparency>70.0</transparency>
+      <facets>14</facets>
+    </visualParameters>
+    <value>12.5</value>
+  </gemstone>
+  <gemstone id="G004" preciousness="SEMI_PRECIOUS">
+    <name>Emerald</name>
+    <origin>Colombia</origin>
+    <visualParameters>
+      <color>GREEN</color>
+      <transparency>80.0</transparency>
+      <facets>7</facets>
+    </visualParameters>
+    <value>8.1</value>
+  </gemstone>
+  <gemstone id="G005" preciousness="PRECIOUS">
+    <name>Sapphire</name>
+    <origin>Sri Lanka</origin>
+    <visualParameters>
+      <color>BLUE</color>
+      <transparency>90.0</transparency>
+      <facets>5</facets>
+    </visualParameters>
+    <value>4.7</value>
+  </gemstone>
+  <gemstone id="G006" preciousness="SEMI_PRECIOUS">
+    <name>Citrine</name>
+    <origin>Brazil</origin>
+    <visualParameters>
+      <color>YELLOW</color>
+      <transparency>95.0</transparency>
+      <facets>12</facets>
+    </visualParameters>
+    <value>15.3</value>
+  </gemstone>
+</Gem>
